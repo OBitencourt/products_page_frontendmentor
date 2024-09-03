@@ -1,0 +1,182 @@
+:root {
+    --color-one: hsl(20, 50%, 98%);
+    --color-two: hsl(13, 31%, 94%);
+    --color-three: hsl(14, 25%, 72%);
+    --color-four: hsl(7, 20%, 60%);
+    --color-five: hsl(12, 20%, 44%);
+    --color-six: hsl(14, 65%, 9%);
+    --color-red: hsl(14, 86%, 42%);
+    --color-green: hsl(159, 69%, 38%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    padding-top: 50px;
+}
+
+body{
+    font-family: "Red Hat Text";
+    background-color: var(--color-two);
+}
+
+.shop .container .products h1 {
+    font-size: 40px;
+}
+
+/*
+
+    shop - products
+
+*/
+
+.products {
+    width: 75%;
+}
+
+.products h1 {
+    margin-left: 30px;
+}
+.products .everyone {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.product img {
+    width: 220px;
+    z-index: 0;
+    border-radius: 10px;
+}
+.product .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    z-index: 1;
+    position: relative;
+    top: -30px;
+    left: 15px;
+    background-color: white;
+    border: 1px solid black;
+    width: 190px;
+    border-radius: 50px / 50px;
+
+}
+
+.product span:first-of-type{
+    color: var(--color-five);
+    font-weight: 600;
+}
+.product h4 {
+    margin: 0px 10px;
+    color: var(--color-six);
+    transition-duration: 100ms;
+}
+.product span:last-of-type {
+    color: var(--color-red);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.product .button {
+    cursor: pointer;
+}
+.product .button:hover {
+    border: 1px solid var(--color-red);
+}
+.product .button:hover h4 {
+    color: var(--color-red);
+}
+.product .button img {
+    width: 30px;
+    margin-right: 10px;
+    margin: 0 auto;
+} 
+
+.product .button div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.product .button div:hover {
+    background-color: white;
+    transition-duration: 200ms;
+}
+
+.product .button div:hover svg path {
+    fill: var(--color-red);
+}
+
+.product .button.active  {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-red);
+    border: none;
+    
+}
+.product .button.active h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+
+.boardActive {
+    border: 3px solid var(--color-red);
+}
+
+
+
+
+
+/*
+
+    CART
+
+*/
+
+
+.shop .container .cart {
+    width: 30%;
+    height: 270px;
+    background-color: var(--color-one);
+    padding: 20px;
+    border-radius: 10px;
+}
+.shop .container .cart div {
+    text-align: center;
+}
+
+.shop .container .cart h2 {
+    color: var(--color-red);
+    margin-bottom: 20px;
+}
+
+.shop .container .cart span {
+    display: block;
+    color: var(--color-five);
+}
+
+.shop .container .cart svg path {
+    fill: var(--color-red);
+}
